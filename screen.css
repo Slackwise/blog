@@ -1,16 +1,30 @@
 * {
+  --zelda-green: #00CC00;
+  --green: #47B747;
+  --blue: #4781b8;
+  --link-color: var(--green);
+  --emphasis-color: var(--green);
+  --body-font: 'Roboto Slab', 'Rockwell', 'Georgia', serif;
+  --code-font: 'Consolas', 'Fira Code', 'Bitstream Vera Sans Mono', monospace;
+  --title-font: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+  --box-shadow: 0 0 20px 2px rgba(0,0,0,.5);
+  --box-border: 1px solid #DDD;
+  --background-color: #EEE;
+  --color: #444;
+  --us-letter-width: 8.5in;
   font-family: 'Roboto', 'Verdana', sans-serif;
-  color: #444;
+  color: var(--color);
+  background-color: var(--background-color);
   box-sizing: border-box;  /* sets the box-sizing to a sane default */
   text-rendering: optimizeLegibility;  /* these properties normalize font rendering */
-  -webkit-font-smoothing: antialiased;  
-  -moz-osx-font-smoothing: grayscale;
   font-kerning: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html, body {
   font-size: 16pt;
-  background-color: #444;
+  background-color: var(--color);
   border: 0;
   margin: 0;
   padding: 0;
@@ -22,11 +36,11 @@ html, body {
 }
 
 div#page {
-  background-color: #EEE;
+  background-color: var(--background--color);
   border: 0;
   margin: 0 auto;
   padding: 0;
-  width: 8.5in; /* US Letter */
+  width: var(--us-letter-width);
   box-shadow: 6px 6px 10px rgba(0,0,0,0.2), -6px 6px 10px rgba(0,0,0,0.2);
 }
 
@@ -37,7 +51,7 @@ header > div#logotype {
   background-image: url('chicago-skyline-header.jpg');
   background-position: bottom right;
   background-size: 100%;
-  color: #EEE;
+  color: var(--background-color);
   height: 2in;
   font-family: 'Press Start 2P', 'Courier New', 'Courier', 'Consolas', 'Helvetica', 'Arial', sans-serif;
   font-size: 50pt;
@@ -63,7 +77,7 @@ header > div#logotype {
   position: relative;
   font-family: inherit;
   text-decoration: none;
-  color: #47B747;
+  color: var(--link-color);
 }
 
 :not(nav) > a:before {
@@ -73,7 +87,7 @@ header > div#logotype {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #47B747;
+  background-color: var(--link-color);
   visibility: hidden;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
@@ -87,6 +101,7 @@ header > div#logotype {
   transform: scaleX(1);
 }
 
+/*
 #wired-link a {
   background-color: transparent;
   color: inherit;
@@ -106,6 +121,7 @@ header > div#logotype {
   background-color: #b4e7f8;
   color: #000
 }
+*/
 
 nav {
   padding: 30px;
@@ -139,8 +155,6 @@ main {
   padding: 10px 1in 10px 1in;
   height: 100%;
   /* width: 6.5in; */
-  box-sizing: border-box;
-  width: 8.5in;
 }
 
 article {
@@ -154,7 +168,7 @@ aside {
 
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
-  font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+  font-family: var(--title-font);
 }
 
 h1 {
@@ -192,8 +206,42 @@ article > hgroup.article-title > h2 {
 }
 
 p {
-  font-family: 'Roboto Slab', 'Rockwell', 'Georgia', serif;
+  font-family: var(--body-font);
   text-align: justify;
+}
+
+em, strong {
+  font-family: var(--body-font);
+}
+
+/*
+em {
+  font-family: 'Roboto Slab', 'Rockwell', 'Georgia', serif;
+  font-style: italic;
+  text-shadow: 1px 1px 0.5px var(--emphasis-color);
+  text-shadow:
+    -1px -1px 0 var(--emphasis-color),
+     1px -1px 0 var(--emphasis-color),
+    -1px  1px 0 var(--emphasis-color),
+     1px  1px 0 var(--emphasis-color);
+}
+
+strong {
+  font-family: 'Roboto Slab', 'Rockwell', 'Georgia', serif;
+  font-weight: normal;
+  color: white;
+  background-color: var(--emphasis-color);
+}
+*/
+
+details {
+  font-family: var(--title-font);
+  border-radius: 2px;
+  border: var(--box-border);
+  box-shadow: var(--box-shadow);
+}
+details > summary {
+  font-family: var(--body-font);
 }
 
 pre {
@@ -201,9 +249,8 @@ pre {
   padding: .2em;
   padding-top: 1px; padding-bottom: 1px;
   background: #f8f8f8;
-  border: 1px solid #dddddd;
-
-  box-shadow: 0px 0px 10px 6px rgba(0,0,0,0.2); /* -6px -6px 0px rgba(0,0,0,0.1); */
+  border: var(--box-border);
+  box-shadow: var(--box-shadow);
   border-radius: 2px;
   margin: .5em 0;
 }
@@ -218,13 +265,12 @@ pre[class*="language-"] *,
 pre > code[class*="language-"],
 pre > code[class*="language-"] * {
   font-size: 10pt;
-  font-family: 'Consolas', 'Fira Code', 'Bitstream Vera Sans Mono', monospace;
+  font-family: var(--code-font);
 }
 
 footer {
   padding: 20px 1in 5px 1in;
-  font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+  font-family: var(--title-font);
   font-size: 10pt;
   text-align: left;
-  width: 6.5in;
 }
