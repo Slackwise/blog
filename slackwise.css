@@ -1,0 +1,253 @@
+/*** SLACKWISE.CSS v1.0.0
+ 
+The purpose of this file is to provide general styles for articles or
+documents I write. THis is not specific to web pages or blog posts,
+but may be usable for printed documents as a form of personal
+letterhead, or even as HTML email styling for branding purposes.
+
+You will find blog and structure related styling in other CSS files.
+ ************************/
+
+/*** FOLD FONTS: {{{ */
+/* latin */
+@font-face {
+  font-family: 'Press Start 2P';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/pressstart2p/v9/e3t4euO8T-267oIAQAu6jDQyK3nVivM.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4WxKOzY.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/robotocondensed/v19/ieVl2ZhZI2eCN5jzbjEETS9weq8-19G7DRs5.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/robotocondensed/v19/ieVl2ZhZI2eCN5jzbjEETS9weq8-19y7DRs5.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/robotocondensed/v19/ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7DQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/robotomono/v13/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vq_R-W4Ep0.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/robotomono/v13/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vq_SuW4Ep0.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/robotomono/v13/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vq_ROW4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/robotoslab/v13/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISmbGRjRdE.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/robotoslab/v13/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISmYWRjRdE.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/robotoslab/v13/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISmb2Rj.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* }}} END OF FOLDED FONTS */
+
+* {
+  --zelda-green: #00CC00;
+  --green: #47B747;
+  --blue: #4781b8;
+  --link-color: var(--green);
+  --emphasis-color: var(--green);
+  --default-font: 'Roboto', 'Verdana', sans-serif;
+  --body-font: 'Roboto Slab', 'Rockwell', 'Georgia', serif;
+  --code-font: 'Consolas', 'Fira Code', 'Bitstream Vera Sans Mono', monospace;
+  --title-font: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+  --box-shadow: 0 0 20px 2px rgba(0,0,0,.5);
+  --box-border: 1px solid #DDD;
+  --background-color: #EEE;
+  --color: #444;
+  --us-letter-width: 8.5in;
+  --us-letter-margin: 1in;
+
+  font-family: var(--default-font);
+  color: var(--color);
+  background-color: var(--background-color);
+  box-sizing: border-box;  /* sets the box-sizing to a sane default */
+  text-rendering: optimizeLegibility;  /* these properties normalize font rendering */
+  font-kerning: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main > article {
+  max-width: var(--us-letter-width);
+  margin: var(--us-letter-margin);
+}
+
+main > article > aside {
+}
+
+main > article > h1,
+main > article > h2,
+main > article > h3,
+main > article > h4,
+main > article > h5,
+main > article > h6 {
+  margin-bottom: 0;
+  font-family: var(--title-font);
+}
+
+main > article > h1 {
+  font-size: 1.6rem;
+}
+main > article > h2 {
+  font-size: 1.1rem;
+}
+main > article > h3 {
+  font-size: 1.1rem;
+}
+main > article > h4 {
+}
+main > article > h5 {
+}
+main > article > h6 {
+}
+
+main > article > hgroup.article-title > * {
+  margin: 0;
+}
+
+main > article > hgroup.article-title > h1 {
+  font-size: 1.6rem;
+}
+
+main > article > hgroup.article-title > h2 {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+main > article > p {
+  font-family: var(--body-font);
+  text-align: justify;
+}
+
+main > article > em, strong {
+  font-family: var(--body-font);
+}
+
+/*
+em {
+  font-family: 'Roboto Slab', 'Rockwell', 'Georgia', serif;
+  font-style: italic;
+  text-shadow: 1px 1px 0.5px var(--emphasis-color);
+  text-shadow:
+    -1px -1px 0 var(--emphasis-color),
+     1px -1px 0 var(--emphasis-color),
+    -1px  1px 0 var(--emphasis-color),
+     1px  1px 0 var(--emphasis-color);
+}
+
+strong {
+  font-family: 'Roboto Slab', 'Rockwell', 'Georgia', serif;
+  font-weight: normal;
+  color: white;
+  background-color: var(--emphasis-color);
+}
+*/
+
+details {
+  font-family: var(--title-font);
+  border-radius: 2px;
+  border: var(--box-border);
+  box-shadow: var(--box-shadow);
+}
+details > summary {
+  font-family: var(--body-font);
+}
+
+pre {
+  font-size: 10pt;
+  padding: .2em;
+  padding-top: 1px; padding-bottom: 1px;
+  background: #f8f8f8;
+  border: var(--box-border);
+  box-shadow: var(--box-shadow);
+  border-radius: 2px;
+  margin: .5em 0;
+}
+
+pre, pre *, code, code *, :not(pre) > code {
+  font-family: 'Roboto Mono', monospace;
+}
+
+pre > code,
+pre[class*="language-"],
+pre[class*="language-"] *,
+pre > code[class*="language-"],
+pre > code[class*="language-"] * {
+  font-size: 10pt;
+  font-family: var(--code-font);
+}
