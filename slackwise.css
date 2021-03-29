@@ -8,7 +8,7 @@ letterhead, or even as HTML email styling for branding purposes.
 You will find blog and structure related styling in other CSS files.
  ************************/
 
-/*** FOLD FONTS: {{{ */
+/*** FOLD FONTS: {{{*/
 /* latin */
 @font-face {
   font-family: 'Press Start 2P';
@@ -68,9 +68,64 @@ You will find blog and structure related styling in other CSS files.
 /* greek */
 @font-face {
   font-family: 'Roboto Mono';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotomono/v13/L0xdDF4xlVMF-BfR8bXMIjhOsXG-q2oeuFoqFrlnAIe2Imhk1T8rbociImtEmOUlYIw.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotomono/v13/L0xdDF4xlVMF-BfR8bXMIjhOsXG-q2oeuFoqFrlnAIe2Imhk1T8rbociImtEleUlYIw.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotomono/v13/L0xdDF4xlVMF-BfR8bXMIjhOsXG-q2oeuFoqFrlnAIe2Imhk1T8rbociImtEm-Ul.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotomono/v13/L0xdDF4xlVMF-BfR8bXMIjhOsXG-q2oeuFoqFrlnAIe2Imhk1T8rbociImtEmOUlYIw.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotomono/v13/L0xdDF4xlVMF-BfR8bXMIjhOsXG-q2oeuFoqFrlnAIe2Imhk1T8rbociImtEleUlYIw.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotomono/v13/L0xdDF4xlVMF-BfR8bXMIjhOsXG-q2oeuFoqFrlnAIe2Imhk1T8rbociImtEm-Ul.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto Mono';
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/robotomono/v13/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vq_R-W4Ep0.woff2) format('woff2');
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotomono/v13/L0xTDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vrtSM1J-gEPT5Ese6hmHSt0mf0h.woff2) format('woff2');
   unicode-range: U+0370-03FF;
 }
 /* latin-ext */
@@ -78,7 +133,8 @@ You will find blog and structure related styling in other CSS files.
   font-family: 'Roboto Mono';
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/robotomono/v13/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vq_SuW4Ep0.woff2) format('woff2');
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotomono/v13/L0xTDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vrtSM1J-gEPT5Ese6hmHSZ0mf0h.woff2) format('woff2');
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
@@ -86,7 +142,35 @@ You will find blog and structure related styling in other CSS files.
   font-family: 'Roboto Mono';
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/robotomono/v13/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vq_ROW4.woff2) format('woff2');
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotomono/v13/L0xTDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vrtSM1J-gEPT5Ese6hmHSh0mQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotomono/v13/L0xTDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vrtSM1J-gEPT5Ese6hmHSt0mf0h.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotomono/v13/L0xTDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vrtSM1J-gEPT5Ese6hmHSZ0mf0h.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotomono/v13/L0xTDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vrtSM1J-gEPT5Ese6hmHSh0mQ.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* greek */
@@ -116,15 +200,36 @@ You will find blog and structure related styling in other CSS files.
 /* }}} END OF FOLDED FONTS */
 
 * {
+  /* ONLY GLOBAL RULES THAT DON'T INHERIT YA ID10T */
+  box-sizing: border-box; /* https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing#content:~:text=It%20is%20often%20useful%20to%20set,on%20while%20laying%20out%20your%20content. */
+}
+
+:root {
+
+  /* TYPOGRAPHY */
+  --default-font: 'Roboto',           'Verdana',      sans-serif;
+  --body-font:    'Roboto Slab',      'Rockwell',     'Georgia', serif;
+  --code-font:    'Roboto Mono Sans', 'Consolas',     'Fira Code', 'Bitstream Vera Sans Mono', monospace;
+  --title-font:   'Roboto Condensed', 'Arial Narrow', 'Tahoma', sans-serif;
+
+  font-family: var(--default-font);
+  text-rendering: optimizeLegibility;
+  font-kerning: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+
+  /* COLORS */
   --zelda-green: #00CC00;
   --green: #47B747;
   --blue: #4781b8;
   --link-color: var(--green);
   --emphasis-color: var(--green);
-  --default-font: 'Roboto', 'Verdana', sans-serif;
-  --body-font: 'Roboto Slab', 'Rockwell', 'Georgia', serif;
-  --code-font: 'Consolas', 'Fira Code', 'Bitstream Vera Sans Mono', monospace;
-  --title-font: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+
+  color: var(--color);
+  background-color: var(--background-color);
+
+  /* SIZING & SPACING */
   --box-shadow: 0 0 20px 2px rgba(0,0,0,.5);
   --box-border: 1px solid #DDD;
   --background-color: #EEE;
@@ -132,14 +237,6 @@ You will find blog and structure related styling in other CSS files.
   --us-letter-width: 8.5in;
   --us-letter-margin: 1in;
 
-  font-family: var(--default-font);
-  color: var(--color);
-  background-color: var(--background-color);
-  box-sizing: border-box;  /* sets the box-sizing to a sane default */
-  text-rendering: optimizeLegibility;  /* these properties normalize font rendering */
-  font-kerning: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 main > article {
@@ -176,25 +273,54 @@ main > article > h5 {
 main > article > h6 {
 }
 
-main > article > hgroup.article-title > * {
+main > article > hgroup:first-of-type > * {
   margin: 0;
 }
 
-main > article > hgroup.article-title > h1 {
+main > article > hgroup:first-of-type > h1 {
   font-size: 1.6rem;
 }
 
-main > article > hgroup.article-title > h2 {
+main > article > hgroup:first-of-type > h2 {
   font-size: 0.9rem;
   color: #777;
 }
 
-main > article > p {
+main > article a {
+  position: relative;
+  font-family: inherit;
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+main > article a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--link-color);
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.1s ease-in-out 0s;
+}
+
+main > article a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+main > article p {
   font-family: var(--body-font);
   text-align: justify;
 }
 
-main > article > em, strong {
+main > article em,
+main > article strong {
   font-family: var(--body-font);
 }
 
@@ -239,7 +365,11 @@ pre {
   margin: .5em 0;
 }
 
-pre, pre *, code, code *, :not(pre) > code {
+pre,
+pre *,
+code,
+code *,
+:not(pre) > code {
   font-family: 'Roboto Mono', monospace;
 }
 
