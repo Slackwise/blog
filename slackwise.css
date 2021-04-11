@@ -1,3 +1,6 @@
+/* vim: fdm=marker */
+
+
 /*** SLACKWISE.CSS v1.0.0
  
 The purpose of this file is to provide general styles for articles or
@@ -380,7 +383,8 @@ You will find blog and structure related styling in other CSS files.
 
 main > article {
   max-width: var(--us-letter-width);
-  padding: var(--us-letter-margin);
+  /* padding: var(--us-letter-margin); */
+  padding: calc(5vw);
 }
 
 main > article > aside {
@@ -521,7 +525,8 @@ pre > code[class*="language-"] * {
   font-family: var(--code-font);
 }
 
-
-@media (width < 8in) {
-  
+@media (min-width: 8.5in) {
+  main > article {
+    padding: var(--us-letter-margin);
+  }
 }
