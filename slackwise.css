@@ -25,6 +25,7 @@ You will find blog and structure related styling in other CSS files.
   --body-font:    'Roboto Slab',      'Rockwell',     'Georgia',    serif;
   --code-font:    'Roboto Mono',      'Consolas',     'Fira Code',  'Bitstream Vera Sans Mono', monospace;
   --title-font:   'Roboto Condensed', 'Arial Narrow', 'Tahoma',     sans-serif;
+  --quote-font:   'Roboto Serif',     'Georgia',      serif;
 
   font-family: var(--general-font);
   text-rendering: optimizeLegibility;
@@ -53,12 +54,11 @@ You will find blog and structure related styling in other CSS files.
   --us-letter-width: 8.5in;
   --us-letter-margin: 1in;
   --content-max-width: calc(var(--us-letter-width) - var(var(--us-letter-margin)));
-  --content-padding: 20px; /* #TODO: calculate relative to... margin? */
+  --content-padding: calc(var(--us-letter-margin) / 5); 
 }
 
 main > article {
   max-width: var(--us-letter-width);
-  padding: 10%;
 }
 
 main > article > aside {
@@ -70,24 +70,12 @@ main > article h3,
 main > article h4,
 main > article h5,
 main > article h6 {
-  margin-bottom: 0;
   font-family: var(--title-font);
+  font-size: 1.1em;
 }
 
 main > article > h1 {
-  font-size: 1.6rem;
-}
-main > article > h2 {
-  font-size: 1.1rem;
-}
-main > article > h3 {
-  font-size: 1.1rem;
-}
-main > article > h4 {
-}
-main > article > h5 {
-}
-main > article > h6 {
+  font-size: 1.6em;
 }
 
 main > article > header > hgroup:first-of-type > * {
@@ -95,11 +83,11 @@ main > article > header > hgroup:first-of-type > * {
 }
 
 main > article > header > hgroup:first-of-type > h1 {
-  font-size: 1.6rem;
+  font-size: 1.6em;
 }
 
 main > article > header > hgroup:first-of-type > h2 {
-  font-size: 0.9rem;
+  font-size: 0.9em;
   color: var(--subtitle-color);
 }
 
@@ -172,16 +160,11 @@ details > summary {
 }
 
 pre {
-  font-size: 10pt;
-  padding: .2em;
-  /* padding-top: 1px; */
-  /* padding-bottom: 1px; */
   padding: var(--content-padding);
   background: #f8f8f8;
   border: var(--box-border);
-  box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
-  margin: .5em 0;
+  box-shadow: var(--box-shadow);
 }
 
 pre,
@@ -189,17 +172,16 @@ pre *,
 code,
 code *,
 :not(pre) > code {
-  font-family: 'Roboto Mono', monospace;
+  font-family: var(--code-font);
 }
 
-pre > code,
+/* pre > code,
 pre[class*="language-"],
 pre[class*="language-"] *,
 pre > code[class*="language-"],
 pre > code[class*="language-"] * {
-  font-size: 10pt;
   font-family: var(--code-font);
-}
+} */
 
 @media (min-width: 8.5in) {
   main > article {
