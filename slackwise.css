@@ -175,13 +175,13 @@ code *,
   font-family: var(--code-font);
 }
 
-/* pre > code,
+pre > code,
 pre[class*="language-"],
 pre[class*="language-"] *,
 pre > code[class*="language-"],
 pre > code[class*="language-"] * {
   font-family: var(--code-font);
-} */
+}
 
 @media (min-width: 8.5in) {
   main > article {
