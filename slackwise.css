@@ -41,6 +41,10 @@ You will find blog and structure related styling in other CSS files.
   --link-color: var(--green);
   --emphasis-color: var(--green);
 
+  --color: #444;
+  --subtitle-color: #777;
+  --background-color: #EEE;
+
   color: var(--color);
   background-color: var(--background-color);
 
@@ -48,9 +52,6 @@ You will find blog and structure related styling in other CSS files.
   --box-shadow: 0 0 5px 1px rgba(0,0,0,.5);
   --box-border: 1px solid #DDD;
   --border-radius: 5px;
-  --background-color: #EEE;
-  --color: #444;
-  --subtitle-color: #777;
   --us-letter-width: 8.5in;
   --us-letter-margin: 1in;
   --content-max-width: calc(var(--us-letter-width) - var(var(--us-letter-margin)));
