@@ -4,7 +4,7 @@
 /*** SLACKWISE.CSS v1.0.0
  
 The purpose of this file is to provide general styles for articles or
-documents I write. THis is not specific to web pages or blog posts,
+documents I write. This is not specific to web pages or blog posts,
 but may be usable for printed documents as a form of personal
 letterhead, or even as HTML email styling for branding purposes.
 
@@ -38,6 +38,7 @@ You will find blog and structure related styling in other CSS files.
   --zelda-green: #00CC00;
   --green: #47B747;
   --blue: #4781b8;
+  --almost-white: #f8f8f8;
   --link-color: var(--green);
   --emphasis-color: var(--green);
 
@@ -63,6 +64,7 @@ main > article {
 }
 
 main > article > aside {
+
 }
 
 main > article h1,
@@ -79,76 +81,31 @@ main > article > h1 {
   font-size: 1.6em;
 }
 
-main > article > header > hgroup:first-of-type > * {
+main > article > header * {
   margin: 0;
 }
 
-main > article > header > hgroup:first-of-type > h1 {
-  font-size: 1.6em;
-}
-
-main > article > header > hgroup:first-of-type > h2 {
+main > article > header > hgroup p {
   font-size: 0.9em;
+  font-family: var(--title-font);
+  font-weight: bold;
   color: var(--subtitle-color);
 }
 
 main > article a {
-  position: relative;
   font-family: inherit;
   text-decoration: none;
   color: var(--link-color);
 }
 
-main > article a:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: var(--link-color);
-  visibility: hidden;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.1s ease-in-out 0s;
-}
-
-main > article a:hover:before {
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
+main > article a:hover {
+  text-decoration: underline;
 }
 
 main > article p {
   font-family: var(--body-font);
   text-align: justify;
 }
-
-main > article em,
-main > article strong {
-  font-family: var(--body-font);
-}
-
-/*
-em {
-  font-family: 'Roboto Slab', 'Rockwell', 'Georgia', serif;
-  font-style: italic;
-  text-shadow: 1px 1px 0.5px var(--emphasis-color);
-  text-shadow:
-    -1px -1px 0 var(--emphasis-color),
-     1px -1px 0 var(--emphasis-color),
-    -1px  1px 0 var(--emphasis-color),
-     1px  1px 0 var(--emphasis-color);
-}
-
-strong {
-  font-family: 'Roboto Slab', 'Rockwell', 'Georgia', serif;
-  font-weight: normal;
-  color: white;
-  background-color: var(--emphasis-color);
-}
-*/
 
 details {
   font-family: var(--title-font);
@@ -162,7 +119,7 @@ details > summary {
 
 pre {
   padding: var(--content-padding);
-  background: #f8f8f8;
+  background: var(--almost-white);
   border: var(--box-border);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
