@@ -77,12 +77,12 @@ main > article h4,
 main > article h5,
 main > article h6 {
   font-family: var(--title-font);
-  font-size: 1.1em;
+  font-size: 1.2em;
 }
 
 /* TITLE */
-main > article > h1 {
-  font-size: 1.6em;
+main > article h1 {
+  font-size: 1.8em;
 }
 
 /* Let's keep the title and subtitle close together */
@@ -92,7 +92,7 @@ main > article > header > hgroup * {
 
 /* SUBTITLE */
 main > article > header > hgroup p {
-  font-size: 0.9em;
+  font-size: 1.1em;
   font-family: var(--title-font);
   font-weight: bold;
   color: var(--subtitle-color);
