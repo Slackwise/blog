@@ -59,6 +59,7 @@ You will find blog and structure related styling in other CSS files.
   --content-padding: calc(var(--us-letter-margin) / 5); 
 }
 
+/* Let's keep the width readable, and as a bonus: printable */
 main > article {
   max-width: var(--us-letter-width);
 }
@@ -77,14 +78,17 @@ main > article h6 {
   font-size: 1.1em;
 }
 
+/* TITLE */
 main > article > h1 {
   font-size: 1.6em;
 }
 
-main > article > header * {
-  margin: 0;
+/* Let's keep the title and subtitle close together */
+main > article > header > hgroup * {
+  margin: 0; 
 }
 
+/* SUBTITLE */
 main > article > header > hgroup p {
   font-size: 0.9em;
   font-family: var(--title-font);
@@ -144,5 +148,11 @@ pre > code[class*="language-"] * {
 @media (min-width: 8.5in) {
   main > article {
     padding: var(--us-letter-margin);
+  }
+}
+
+@media print {
+  body {
+    margin: var(--us-letter-margin);
   }
 }
