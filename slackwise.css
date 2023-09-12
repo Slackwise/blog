@@ -38,8 +38,10 @@ You will find blog and structure related styling in other CSS files.
   --zelda-green: #00CC00;
   --green: #47B747;
   --blue: #4781b8;
+  --purple: #5847b8;
   --almost-white: #f8f8f8;
-  --link-color: var(--green);
+  --link-color: var(--blue);
+  --link-color-visited: var(--purple);
   --emphasis-color: var(--green);
 
   --color: #444;
@@ -104,6 +106,10 @@ main > article a {
 
 main > article a:hover {
   text-decoration: underline;
+}
+
+main > article a:visited {
+  color: var(--link-color-visited);
 }
 
 main > article p {
