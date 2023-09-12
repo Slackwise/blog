@@ -152,7 +152,14 @@ pre > code[class*="language-"] * {
 }
 
 @media print {
-  body {
+
+  /* Only want to print the articles themselves, so hide the rest: */
+  body > :not(main) {
+    display: none;
+  }
+
+  /* And let's make sure they have some real margins: */
+  main > article {
     margin: var(--us-letter-margin);
   }
 }
