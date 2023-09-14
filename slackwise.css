@@ -38,6 +38,7 @@ You will find blog and structure related styling in other CSS files.
   --blue: #4781b8;
   --purple: #5847b8;
   --almost-white: #f8f8f8;
+  --almost-black: #1E1E1E;
   --link-color: var(--blue);
   --link-color-visited: var(--purple);
   --emphasis-color: var(--green);
@@ -127,7 +128,8 @@ details > summary {
 
 pre {
   padding: var(--content-padding);
-  background: var(--almost-white);
+  background: var(--almost-black);
+  color: var(--almost-white);
   border: var(--box-border);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
