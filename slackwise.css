@@ -29,6 +29,7 @@ You will find blog and structure related styling in other CSS files.
 
   --title-font-size: 1.8em;
   --subtitle-font-size: 1.1em;
+  font-size: 1.2em; /* Accessibility friendly relative size for browser override, and larger in general for readability */
   font-family: var(--general-font);
   font-kerning: auto;
   font-variant-ligatures: common-ligatures;
