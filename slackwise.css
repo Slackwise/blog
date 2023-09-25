@@ -178,3 +178,10 @@ pre > code[class*="language-"] * {
     margin: var(--us-letter-margin);
   }
 }
+
+@media (max-resolution: 96dpi) {
+  /* Old ass displays render fonts poorly, so let's increase their stroke width a little to improve readability: */
+  article p { 
+    stroke-width: 0.2em;
+  }
+}
