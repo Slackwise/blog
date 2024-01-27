@@ -51,14 +51,15 @@ You will find blog and structure related styling in other CSS files.
   --almost-black: #1E1E1E;
 
   /* SEMANTIC COLORS */
-  --color: var(--dark-grey);
+  --body-font-color: var(--dark-grey);
+  --aside-font-color: color-mix(in srgb, var(--body-font-color), white 30%); /* lighten by mixing in white */
   --subtitle-color: var(--lighter-dark-grey);
   --background-color: var(--almost-white-grey);
   --link-color: var(--blue);
   --link-color-visited: var(--purple);
   --emphasis-color: var(--green);
 
-  color: var(--color);
+  color: var(--body-font-color);
   background-color: var(--background-color);
 
   /* SIZING & SPACING */
@@ -161,6 +162,18 @@ pre[class*="language-"] *,
 pre > code[class*="language-"],
 pre > code[class*="language-"] * {
   font-family: var(--code-font);
+}
+
+article footer {
+  color: var(--aside-font-color);
+  font-size: 80%;
+}
+
+article footer dl {
+}
+article footer dl dt {
+}
+article footer dl dd {
 }
 
 @media (max-width: 8.5in) {
