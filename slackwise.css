@@ -72,57 +72,57 @@ You will find blog and structure related styling in other CSS files.
 }
 
 /* Let's keep the width readable, and as a bonus: printable */
-main > article {
+article {
   max-width: var(--us-letter-width);
 }
 
-main > article > aside {
+article > aside {
 
 }
 
-main > article h1,
-main > article h2,
-main > article h3,
-main > article h4,
-main > article h5,
-main > article h6 {
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
   font-family: var(--title-font);
   font-size: 1.2em;
 }
 
 /* TITLE */
-main > article h1 {
+article h1 {
   font-size: var(--title-font-size);
 }
 
 /* Let's keep the title and subtitle close together */
-main > article > header > hgroup * {
+article > header > hgroup * {
   margin: 0; 
 }
 
 /* SUBTITLE */
-main > article > header > hgroup p {
+article > header > hgroup p {
   font-size: var(--subtitle-font-size);
   font-family: var(--title-font);
   font-weight: bold;
   color: var(--subtitle-color);
 }
 
-main > article a {
+article a {
   font-family: inherit;
   text-decoration: none;
   color: var(--link-color);
 }
 
-main > article a:hover {
+article a:hover {
   text-decoration: underline;
 }
 
-main > article a:visited {
+article a:visited {
   color: var(--link-color-visited);
 }
 
-main > article p {
+article p {
   font-family: var(--body-font);
   text-align: justify;
 }
@@ -163,7 +163,7 @@ pre > code[class*="language-"] * {
 }
 
 @media (min-width: 8.5in) {
-  main > article {
+  article {
     padding: var(--us-letter-margin);
   }
 }
@@ -176,7 +176,7 @@ pre > code[class*="language-"] * {
   }
 
   /* And let's make sure they have some real margins: */
-  main > article {
+  article {
     margin: var(--us-letter-margin);
   }
 }
