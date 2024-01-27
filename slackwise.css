@@ -67,13 +67,14 @@ You will find blog and structure related styling in other CSS files.
   --border-radius: 5px;
   --us-letter-width: 8.5in;
   --us-letter-margin: 1in;
-  --content-max-width: calc(var(--us-letter-width) - var(var(--us-letter-margin)));
+  --content-max-width: calc(var(--us-letter-width) - var(--us-letter-margin));
   --content-padding: calc(var(--us-letter-margin) / 5); 
 }
 
 /* Let's keep the width readable, and as a bonus: printable */
 article {
-  max-width: var(--us-letter-width);
+  max-width: var(--content-max-width);
+  margin: var(--us-letter-margin);
 }
 
 article > aside {
@@ -162,9 +163,9 @@ pre > code[class*="language-"] * {
   font-family: var(--code-font);
 }
 
-@media (min-width: 8.5in) {
+@media (max-width: 8.5in) {
   article {
-    padding: var(--us-letter-margin);
+    margin: var(--content-padding);
   }
 }
 
@@ -176,8 +177,13 @@ pre > code[class*="language-"] * {
   }
 
   /* And let's make sure they have some real margins: */
-  article {
+  @page {
+    size: letter;
     margin: var(--us-letter-margin);
+  }
+  article {
+    margin: 0; /* Relying on @page margin instead */
+    font-size: 80%; /* Honestly just winged this to match the render vs print sizes */
   }
 }
 
