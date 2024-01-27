@@ -166,12 +166,26 @@ pre > code[class*="language-"] * {
 
 article footer {
   color: var(--aside-font-color);
-  font-size: 80%;
+  font: var(--title-font);
+  font-size: 60%;
 }
 
 article footer dl {
+  width: min-content;
+  display: grid;
+  grid-template-columns: 100% 100%;
+  column-gap: 10px;
 }
+
+article footer dl > * {
+  margin: 0;
+}
+
 article footer dl dt {
+  /* background-color: var(--almost-white-grey); */
+  /* float: left;
+  clear: left; */
+  /* padding-right: var(--content-padding); */
 }
 article footer dl dd {
 }
