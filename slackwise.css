@@ -78,6 +78,10 @@ article {
   margin: var(--us-letter-margin);
 }
 
+p {
+  max-width: var(--content-max-width);
+}
+
 article > aside {
 
 }
@@ -190,13 +194,17 @@ article footer dl dt {
 article footer dl dd {
 }
 
-@media (max-width: 8.5in) {
+@media (max-width: 8.5in) { /* US letter width */
   article {
     margin: var(--content-padding);
   }
 }
 
 @media print {
+  @page {
+    size: letter;
+    margin: var(--us-letter-margin);
+  }
 
   /* Only want to print the articles themselves, so hide the rest: */
   body > :not(main) {
@@ -204,10 +212,6 @@ article footer dl dd {
   }
 
   /* And let's make sure they have some real margins: */
-  @page {
-    size: letter;
-    margin: var(--us-letter-margin);
-  }
   article {
     margin: 0; /* Relying on @page margin instead */
     font-size: 80%; /* Honestly just winged this to match the render vs print sizes */
@@ -216,7 +220,8 @@ article footer dl dd {
 
 @media (max-resolution: 96dpi) {
   /* Old ass displays render fonts poorly, so let's increase their stroke width a little to improve readability: */
+  /* Confirmed to target 1080p and low DPI displays that have issues rendering fonts */
   article p { 
-    /* stroke-width: 0.2em; */
+    /* stroke-width: 0.2em; */ /* This improves the legibility of fonts on Windows, at least when light-on-dark */
   }
 }
