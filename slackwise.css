@@ -82,6 +82,10 @@ article {
   margin: var(--us-letter-margin);
 }
 
+/*
+  If we are composing outside an article, we still want any body copy
+  to fit within a letter.
+*/
 p {
   max-width: var(--content-max-width);
 }
