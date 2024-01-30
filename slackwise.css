@@ -35,7 +35,6 @@ You will find blog and structure related styling in other CSS files.
   font-family: var(--general-font);
   font-kerning: auto;
   font-variant-ligatures: common-ligatures;
-  /* -webkit-text-stroke-width: 0.2px; */ /* #TODO: Enable for Windows only somehow... */
 
 
   /* COLOR NAMES */
@@ -171,6 +170,7 @@ pre[class*="language-"] *,
 pre > code[class*="language-"],
 pre > code[class*="language-"] * {
   font-family: var(--code-font);
+  font-size: 80%;
 }
 
 footer {
