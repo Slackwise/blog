@@ -179,10 +179,18 @@ footer {
   font-size: 60%;
 }
 
+footer h2 {
+  display: none;
+}
+
 footer dl {
-  width: min-content;
+  width: 100%;
   display: grid;
-  grid-template-columns: 100% 100%;
+  grid-template-areas: "author     publishdate"
+                       "comments   updatedate"
+                       "comments   versionhistory";
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 2fr;
   column-gap: 10px;
 }
 
@@ -191,6 +199,7 @@ footer dl > * {
 }
 
 footer dl dt {
+  display: none;
   /* background-color: var(--almost-white-grey); */
   /* float: left;
   clear: left; */
