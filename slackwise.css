@@ -72,9 +72,13 @@ You will find blog and structure related styling in other CSS files.
   --content-padding: calc(var(--us-letter-margin) / 5); 
 }
 
-/* Let's keep the width readable, and as a bonus: printable */
+/*
+  Let's keep the width readable, and as a bonus: printable.
+  The goal of this layout is to match a (US) letter in size and style,
+  as this stylesheet will be used for my own documents as well.
+*/
 article {
-  max-width: var(--content-max-width);
+  max-width: var(--us-letter-width);
   margin: var(--us-letter-margin);
 }
 
