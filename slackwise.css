@@ -187,11 +187,12 @@ footer dl {
   width: 100%;
   display: grid;
   grid-template-areas: "author     publishdate"
-                       "comments   updatedate"
+                       "license    updatedate"
                        "comments   versionhistory";
-  grid-template-columns: 3fr 1fr;
-  grid-template-rows: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   column-gap: 10px;
+  font-size: 60%;
 }
 
 footer dl > * {
@@ -206,6 +207,36 @@ footer dl dt {
   /* padding-right: var(--content-padding); */
 }
 footer dl dd {
+}
+
+footer dd[itemprop="author"] {
+  grid-area: author;
+}
+footer dd:has(a[itemprop="license"]) {
+  grid-area: license;
+}
+footer dd:has(a[itemprop="discussionUrl"]) {
+  grid-area: comments;
+  font-size: 200%;
+  font-weight: bold;
+}
+footer dd:has(time[itemprop="datePublished"]) {
+  grid-area: publishdate;
+  text-align: right;
+}
+footer dd:has(time[itemprop="datePublished"])::before {
+  content: "Published: ";
+}
+footer dd:has(time[itemprop="dateModified"]) {
+  grid-area: updatedate;
+  text-align: right;
+}
+footer dd:has(time[itemprop="dateModified"])::before {
+  content: "Last Updated: ";
+}
+footer dd:has(a[itemprop="archivedAt"]) {
+  grid-area: versionhistory;
+  text-align: right;
 }
 
 @media (max-width: 8.5in) { /* US letter width */
