@@ -67,7 +67,7 @@ You will find blog and structure related styling in other CSS files.
   --border-radius: 5px;
   --us-letter-width: 8.5in;
   --us-letter-margin: 1in;
-  --content-max-width: calc(var(--us-letter-width) - var(--us-letter-margin));
+  --content-max-width: calc(var(--us-letter-width) - var(--us-letter-margin) * 2);
   --content-padding: calc(var(--us-letter-margin) / 5); 
 }
 
@@ -77,7 +77,7 @@ You will find blog and structure related styling in other CSS files.
   as this stylesheet will be used for my own documents as well.
 */
 article {
-  max-width: var(--us-letter-width);
+  max-width: var(--content-max-width);
   margin: var(--us-letter-margin);
 }
 
@@ -184,7 +184,7 @@ footer h2 {
 }
 
 footer dl {
-  width: 100%;
+  /* width: 100%; */
   display: grid;
   grid-template-areas: "author     publishdate"
                        "license    updatedate"
@@ -261,7 +261,6 @@ footer dd:has(a[itemprop="archivedAt"]) {
   /* And let's make sure they have some real margins: */
   article {
     margin: 0; /* Relying on @page margin instead */
-    font-size: 80%; /* Honestly just winged this to match the render vs print sizes */
   }
 }
 
