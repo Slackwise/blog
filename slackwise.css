@@ -71,20 +71,16 @@ You will find blog and structure related styling in other CSS files.
   --content-padding: calc(var(--us-letter-margin) / 5); 
 }
 
-/*
-  Let's keep the width readable, and as a bonus: printable.
-  The goal of this layout is to match a (US) letter in size and style,
-  as this stylesheet will be used for my own documents as well.
-*/
+/*  Let's keep the width readable, and as a bonus: printable.
+    The goal of this layout is to match a (US) letter in size and style,
+    as this stylesheet will be used for my own documents as well.  */
 article {
   max-width: var(--content-max-width);
   margin: var(--us-letter-margin);
 }
 
-/*
-  If we are composing outside an article, we still want any body copy
-  to fit within a letter.
-*/
+/*  If we are composing outside an article, we still want any body copy
+    to fit within a letter.  */
 p {
   max-width: var(--content-max-width);
   font-family: var(--body-font);
@@ -179,6 +175,12 @@ footer {
   font-size: 60%;
 }
 
+/*  I don't think anyone cares to remember if they visited these,
+    so they'll end up always purple, which will just look bad. */
+footer a:visited { 
+  color: var(--link-color);
+}
+
 footer h2 {
   display: none;
 }
@@ -217,6 +219,9 @@ footer dd[itemprop="author"]::before {
 }
 footer dd:has(a[itemprop="license"]) {
   grid-area: license;
+}
+footer a[itemprop="license"] {
+  color: var(--body-copy-color); /* We really don't neeeed the link to draw attention, but might as well leave it for the curious... */
 }
 footer dd:has(a[itemprop="discussionUrl"]) {
   grid-area: comments;
