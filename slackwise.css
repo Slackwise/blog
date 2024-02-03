@@ -188,9 +188,10 @@ footer dl {
   display: grid;
   grid-template-areas: "author     publishdate"
                        "license    updatedate"
-                       "comments   versionhistory";
+                       "comments   versionhistory"
+                       "comments   .";
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   column-gap: 10px;
 }
 
