@@ -148,6 +148,7 @@ blockquote {
   padding-left: 10px;
   margin: var(--content-padding);
   text-align: justify;
+  font-family: var(--quote-font);
   font-style: italic;
 }
 blockquote::before {
@@ -160,7 +161,7 @@ blockquote::before {
   padding: 0;
   line-height: 0;
   float: left;
-  left: -30px;
+  left: -32px;
   top: 30px;
 }
 
