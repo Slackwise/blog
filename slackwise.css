@@ -146,10 +146,14 @@ details > summary {
 blockquote {
   border-left: 20px solid var(--light-grey);
   padding-left: 10px;
+  margin: var(--content-padding);
+  text-align: justify;
+  font-style: italic;
 }
 blockquote::before {
   content: open-quote;
   font-size: 60px;
+  font-style: normal;
   position: relative;
   display: block;
   margin: 0;
