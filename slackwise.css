@@ -143,6 +143,23 @@ details > summary {
   font-family: var(--body-font);
 }
 
+blockquote {
+  border-left: 20px solid var(--light-grey);
+  padding-left: 10px;
+}
+blockquote::before {
+  content: open-quote;
+  font-size: 60px;
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  float: left;
+  left: -30px;
+  top: 30px;
+}
+
 pre {
   padding: var(--content-padding);
   background: var(--almost-black);
