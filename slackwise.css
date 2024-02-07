@@ -168,7 +168,7 @@ blockquote::before {
   display: block;
   /* And let's position it: */
   float: left;
-  left: -32px;
+  left: -32px; /* a total of the border and padding plus 2 pixels for the font's size/shape */
   top: 30px;
   /* And we need it to not shift around any text near it: */
   margin: 0;
