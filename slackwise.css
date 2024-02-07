@@ -194,7 +194,7 @@ pre > code[class*="language-"] * {
 footer {
   color: var(--aside-copy-color);
   font: var(--title-font);
-  font-size: 60%;
+  font-size: 80%;
 }
 
 /*  I don't think anyone cares to remember if they visited these,
