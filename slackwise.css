@@ -143,26 +143,38 @@ details > summary {
   font-family: var(--body-font);
 }
 
+/*  I wanted to style this without adding HTML,
+    and the goal was to have an email-style left margin bar,
+    and then I wanted it to be a little more obvious it was
+    a quote, so I added the literal quote. */
 blockquote {
-  border-left: 20px solid var(--light-grey);
-  padding-left: 10px;
-  margin: var(--content-padding);
   text-align: justify;
   font-family: var(--quote-font);
   font-style: italic;
+  /* First we create the email quote styled bar using a border: */
+  border-left: 20px solid var(--light-grey);
+  /* And we give it some breathing room: */
+  padding-left: 10px;
+  /* And the quote should stand off from the rest of the article body: */
+  margin: var(--content-padding);
 }
 blockquote::before {
+  /* Let's create a "virtual" character: */
   content: open-quote;
   font-size: 60px;
   font-style: normal;
+  /* We need it to render outside the quote itself: */
   position: relative;
   display: block;
-  margin: 0;
-  padding: 0;
-  line-height: 0;
+  /* And let's position it: */
   float: left;
   left: -32px;
   top: 30px;
+  /* And we need it to not shift around any text near it: */
+  margin: 0;
+  padding: 0;
+  /* This specifically makes it almost intangible: */
+  line-height: 0; 
 }
 
 pre {
