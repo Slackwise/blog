@@ -259,7 +259,7 @@ footer a[itemprop="license"] {
 }
 footer dd:has(a[itemprop="discussionUrl"]) {
   grid-area: comments;
-  font-size: 200%;
+  font-size: 150%;
   font-weight: bold;
 }
 footer dd:has(time[itemprop="datePublished"]) {
