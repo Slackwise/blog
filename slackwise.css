@@ -11,15 +11,7 @@ letterhead, or even as HTML email styling for branding purposes.
 You will find blog and structure related styling in other CSS files.
  ************************/
 
- /* A variant with more breathing room for paragraph readability */
- @font-face {
-  font-family: "Roboto Flex";
-  src: local("Roboto Flex"), url("roboto-flex.ttf");
-  /* font-weight: 450; */  /* Desireable on 96dpi displays and below */
-  font-stretch: 120%;
-  font-variation-settings: "YOPQ" 90; /* Makes only the thinner parts a bit thicker */
- }
-
+ @import url("roboto-fonts/roboto-fonts.css");
 
 * {
   /* ONLY GLOBAL RULES THAT DON'T INHERIT */
@@ -29,17 +21,16 @@ You will find blog and structure related styling in other CSS files.
 :root {
 
   /* TYPOGRAPHY */
-  --general-font: 'Roboto',           'Roboto',       'Verdana',      sans-serif;
-  --body-font:    'Roboto Flex',      'Roboto',       'Verdana',      sans-serif;
-  --code-font:    'Roboto Mono',      'Consolas',     'Inconsolata',  monospace;
-  --title-font:   'Roboto Condensed', 'Arial Narrow', 'Tahoma',       sans-serif;
-  --quote-font:   'Roboto Serif',     'Georgia',                      serif;
+  --general-font: 'Roboto',                     'Roboto',       'Verdana',      sans-serif;
+  --body-font:    'Roboto Flex (Custom Body)',  'Roboto',       'Verdana',      sans-serif;
+  --code-font:    'Roboto Mono',                'Consolas',     'Inconsolata',  monospace;
+  --title-font:   'Roboto Condensed',           'Arial Narrow', 'Tahoma',       sans-serif;
+  --quote-font:   'Roboto Serif',               'Georgia',                      serif;
 
-  font-size: 1.2em;
 
   --title-font-size: 150%;
   --subtitle-font-size: 90%;
-  /* font-size: 1.2em; /* Accessibility friendly relative size for browser override, and larger in general for readability */
+  font-size: 1.2em; /* Accessibility friendly relative size for browser override, and larger in general for readability */
   font-family: var(--general-font);
   font-kerning: auto;
   font-variant-ligatures: common-ligatures;
