@@ -111,41 +111,45 @@ h1 {
   font-size: var(--title-font-size);
 }
 
-/* Let's keep the title and subtitle close together */
-header > hgroup * {
-  margin: 0; 
+header {
+  /* Let's keep the title and subtitle close together */
+  > hgroup * {
+    margin: 0; 
+  }
+  /* SUBTITLE */
+  > hgroup p {
+    font-size: var(--subtitle-font-size);
+    font-family: var(--title-font);
+    font-weight: bold;
+    color: var(--subtitle-color);
+  }
 }
 
-/* SUBTITLE */
-header > hgroup p {
-  font-size: var(--subtitle-font-size);
-  font-family: var(--title-font);
-  font-weight: bold;
-  color: var(--subtitle-color);
-}
 
 a {
   font-family: inherit;
   text-decoration: none;
   color: var(--link-color);
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: var(--link-color-visited);
+  }
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
-a:visited {
-  color: var(--link-color-visited);
-}
 
 details {
   font-family: var(--title-font);
   border-radius: var(--border-radius);
   border: var(--box-border);
   box-shadow: var(--box-shadow);
-}
-details > summary {
-  font-family: var(--body-font);
+
+  > summary {
+    font-family: var(--body-font);
+  }
 }
 
 /*  I wanted to style quotes without adding HTML,
@@ -162,24 +166,25 @@ blockquote {
   padding-left: 10px;
   /* And the quote should stand off from the rest of the article body: */
   margin: var(--content-padding);
-}
-blockquote::before {
-  /* Let's create a "virtual" character: */
-  content: open-quote;
-  font-size: 60px;
-  font-style: normal;
-  /* We need it to render outside the quote itself: */
-  position: relative;
-  display: block;
-  /* And let's position it: */
-  float: left;
-  left: -32px; /* a total of the border and padding plus 2 pixels for the font's size/shape */
-  top: 30px;
-  /* And we need it to not shift around any text near it: */
-  margin: 0;
-  padding: 0;
-  /* This specifically makes it almost intangible: */
-  line-height: 0; 
+
+  &::before {
+    /* Let's create a "virtual" character: */
+    content: open-quote;
+    font-size: 60px;
+    font-style: normal;
+    /* We need it to render outside the quote itself: */
+    position: relative;
+    display: block;
+    /* And let's position it: */
+    float: left;
+    left: -32px; /* a total of the border and padding plus 2 pixels for the font's size/shape */
+    top: 30px;
+    /* And we need it to not shift around any text near it: */
+    margin: 0;
+    padding: 0;
+    /* This specifically makes it almost intangible: */
+    line-height: 0; 
+  }
 }
 
 pre {
@@ -214,79 +219,79 @@ footer {
   color: var(--aside-copy-color);
   font: var(--title-font);
   font-size: 80%;
+  /*  I don't think anyone cares to remember if they visited these,
+      so they'll end up always purple, which will just look bad. */
+  & a:visited { 
+    color: var(--link-color);
+  }
+
+  & h2 {
+    display: none;
+  }
+
+  & dl {
+    /* width: 100%; */
+    display: grid;
+    grid-template-areas: "author     publishdate"
+                        "license    updatedate"
+                        "comments   versionhistory"
+                        "comments   .";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    column-gap: 10px;
+  }
+
+  & dl > * {
+    margin: 0;
+  }
+
+  & dl dt {
+    display: none;
+    /* background-color: var(--almost-white-grey); */
+    /* float: left;
+    clear: left; */
+    /* padding-right: var(--content-padding); */
+  }
+  & dl dd {
+  }
+
+  & dd[itemprop="author"] {
+    grid-area: author;
+  }
+  & dd[itemprop="author"]::before {
+    content: "by ";
+  }
+  & dd:has(a[itemprop="license"]) {
+    grid-area: license;
+  }
+  & a[itemprop="license"] {
+    color: var(--body-copy-color); /* We really don't neeeed the link to draw attention, but might as well leave it for the curious... */
+  }
+  & dd:has(a[itemprop="discussionUrl"]) {
+    grid-area: comments;
+    font-size: 150%;
+    font-weight: bold;
+  }
+  & dd:has(time[itemprop="datePublished"]) {
+    grid-area: publishdate;
+    text-align: right;
+  }
+  & dd:has(time[itemprop="datePublished"])::before {
+    content: "Published: ";
+  }
+  & dd:has(time[itemprop="dateModified"]) {
+    grid-area: updatedate;
+    text-align: right;
+  }
+  & dd:has(time[itemprop="dateModified"])::before {
+    content: "Last Updated: ";
+  }
+  & dd:has(a[itemprop="archivedAt"]) {
+    grid-area: versionhistory;
+    text-align: right;
+  }
 }
 
-/*  I don't think anyone cares to remember if they visited these,
-    so they'll end up always purple, which will just look bad. */
-footer a:visited { 
-  color: var(--link-color);
-}
-
-footer h2 {
-  display: none;
-}
-
-footer dl {
-  /* width: 100%; */
-  display: grid;
-  grid-template-areas: "author     publishdate"
-                       "license    updatedate"
-                       "comments   versionhistory"
-                       "comments   .";
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  column-gap: 10px;
-}
-
-footer dl > * {
-  margin: 0;
-}
-
-footer dl dt {
-  display: none;
-  /* background-color: var(--almost-white-grey); */
-  /* float: left;
-  clear: left; */
-  /* padding-right: var(--content-padding); */
-}
-footer dl dd {
-}
-
-footer dd[itemprop="author"] {
-  grid-area: author;
-}
-footer dd[itemprop="author"]::before {
-  content: "by ";
-}
-footer dd:has(a[itemprop="license"]) {
-  grid-area: license;
-}
-footer a[itemprop="license"] {
-  color: var(--body-copy-color); /* We really don't neeeed the link to draw attention, but might as well leave it for the curious... */
-}
-footer dd:has(a[itemprop="discussionUrl"]) {
-  grid-area: comments;
-  font-size: 150%;
-  font-weight: bold;
-}
-footer dd:has(time[itemprop="datePublished"]) {
-  grid-area: publishdate;
-  text-align: right;
-}
-footer dd:has(time[itemprop="datePublished"])::before {
-  content: "Published: ";
-}
-footer dd:has(time[itemprop="dateModified"]) {
-  grid-area: updatedate;
-  text-align: right;
-}
-footer dd:has(time[itemprop="dateModified"])::before {
-  content: "Last Updated: ";
-}
-footer dd:has(a[itemprop="archivedAt"]) {
-  grid-area: versionhistory;
-  text-align: right;
-}
 
 @media (max-width: 8.5in) { /* US letter width */
   article {
