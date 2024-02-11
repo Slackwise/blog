@@ -11,7 +11,15 @@ letterhead, or even as HTML email styling for branding purposes.
 You will find blog and structure related styling in other CSS files.
  ************************/
 
- /* @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre&display=swap'); */
+ /* A variant with more breathing room for paragraph readability */
+ @font-face {
+  font-family: "Roboto Flex";
+  src: local("Roboto Flex"), url("roboto-flex.ttf");
+  /* font-weight: 450; */  /* Desireable on 96dpi displays and below */
+  font-stretch: 120%;
+  font-variation-settings: "YOPQ" 90; /* Makes only the thinner parts a bit thicker */
+ }
+
 
 * {
   /* ONLY GLOBAL RULES THAT DON'T INHERIT */
@@ -21,13 +29,13 @@ You will find blog and structure related styling in other CSS files.
 :root {
 
   /* TYPOGRAPHY */
-  --general-font: 'Roboto',           'Verdana',      sans-serif;
-  --body-font:    'Roboto Slab',      'Rockwell',     'Georgia',     serif;
-  --code-font:    'Roboto Mono',      'Consolas',     'Inconsolata', monospace;
-  --title-font:   'Roboto Condensed', 'Arial Narrow', 'Tahoma',      sans-serif;
-  --quote-font:   'Roboto Serif',     'Georgia',      serif;
+  --general-font: 'Roboto',           'Roboto',       'Verdana',      sans-serif;
+  --body-font:    'Roboto Flex',      'Roboto',       'Verdana',      sans-serif;
+  --code-font:    'Roboto Mono',      'Consolas',     'Inconsolata',  monospace;
+  --title-font:   'Roboto Condensed', 'Arial Narrow', 'Tahoma',       sans-serif;
+  --quote-font:   'Roboto Serif',     'Georgia',                      serif;
 
-  /* --body-font: 'Averia Serif Libre'; */
+  font-size: 1.2em;
 
   --title-font-size: 150%;
   --subtitle-font-size: 90%;
@@ -316,9 +324,15 @@ footer {
   }
 }
 
+/*  Old ass displays render fonts poorly, so there are two ways to improve readabilty:
+    - With a variable font, you can bump the weight or grade a bit.
+    - With a fixed font, you can add a `stroke-width` of `0.2em`.
+    Using a `@media` rule, we can target lower resolution displays,
+    where `96di` matches common desktop displays of 1080p and below.  */
 @media (max-resolution: 96dpi) {
-  /* Old ass displays render fonts poorly, so let's increase their stroke width a little to improve readability: */
-  /* Confirmed to target 1080p and low DPI displays that have issues rendering fonts */
+  :root {
+    font-weight: 450;
+  }
   p { 
     /* stroke-width: 0.2em; */ /* This improves the legibility of fonts on Windows, at least when light-on-dark */
   }
