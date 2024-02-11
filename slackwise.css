@@ -30,7 +30,7 @@ You will find blog and structure related styling in other CSS files.
 
   --title-font-size: 150%;
   --subtitle-font-size: 90%;
-  font-size: 1.2em; /* Accessibility friendly relative size for browser override, and larger in general for readability */
+  font-size: 120%; /* Accessibility friendly relative size for browser override, and larger in general for readability */
   font-family: var(--general-font);
   font-kerning: auto;
   font-variant-ligatures: common-ligatures;
@@ -202,7 +202,7 @@ code,
 code *,
 :not(pre) > code {
   font-family: var(--code-font);
-  font-size: 0.8em;
+  font-size: 80%;
   font-style: normal;
 }
 
@@ -218,7 +218,7 @@ pre > code[class*="language-"] * {
 footer {
   color: var(--aside-copy-color);
   font-family: var(--title-font);
-  font-size: 80%;
+  font-size: 60%;
   /*  I don't think anyone cares to remember if they visited these,
       so they'll end up always purple, which will just look bad. */
   & a:visited { 
