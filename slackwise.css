@@ -197,10 +197,13 @@ pre {
 
 pre,
 pre *,
+var,
 code,
 code *,
 :not(pre) > code {
   font-family: var(--code-font);
+  font-size: 0.8em;
+  font-style: normal;
 }
 
 pre > code,
@@ -208,15 +211,13 @@ pre[class*="language-"],
 pre[class*="language-"] *,
 pre > code[class*="language-"],
 pre > code[class*="language-"] * {
-  font-family: var(--code-font);
-  font-size: 80%;
 }
 
 /*  The article's footer is mostly for metadata,
     so I'm designing it as a proper list of key/value pairs. */
 footer {
   color: var(--aside-copy-color);
-  font: var(--title-font);
+  font-family: var(--title-font);
   font-size: 80%;
   /*  I don't think anyone cares to remember if they visited these,
       so they'll end up always purple, which will just look bad. */
