@@ -37,7 +37,9 @@ You will find blog and structure related styling in other CSS files.
   font-variant-ligatures: common-ligatures;
 
 
-  /* COLOR NAMES */
+  /*  COLOR NAMES
+      These are just named colors, with no semantics as to where they can or should be used.
+      This list can just keep growing, and being tweaked over time.*/
   --zelda-green: #00CC00;
   --green: #47B747;
   --blue: #4781b8;
@@ -49,7 +51,10 @@ You will find blog and structure related styling in other CSS files.
   --lighter-dark-grey: #777;
   --almost-black: #1E1E1E;
 
-  /* SEMANTIC COLORS */
+  /*  SEMANTIC COLORS
+      From the above color names, we can now pick and choose them to actually color our elments.
+      This separation allows us to tweak colors and usage independently, which is useful for
+      evolving a design and creating variants like dark modes. */
   --body-copy-color: var(--dark-grey);
   --aside-copy-color: color-mix(in srgb, var(--body-copy-color), white 30%); /* lighten by mixing in white */
   --subtitle-color: var(--lighter-dark-grey);
@@ -143,7 +148,7 @@ details > summary {
   font-family: var(--body-font);
 }
 
-/*  I wanted to style this without adding HTML,
+/*  I wanted to style quotes without adding HTML,
     and the goal was to have an email-style left margin bar,
     and then I wanted it to be a little more obvious it was
     a quote, so I added the literal quote. */
@@ -203,6 +208,8 @@ pre > code[class*="language-"] * {
   font-size: 80%;
 }
 
+/*  The article's footer is mostly for metadata,
+    so I'm designing it as a proper list of key/value pairs. */
 footer {
   color: var(--aside-copy-color);
   font: var(--title-font);
