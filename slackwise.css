@@ -304,6 +304,10 @@ footer {
     margin: var(--us-letter-margin);
   }
 
+  :root {
+    font-weight: normal;
+  }
+
   /* Only want to print the articles themselves, so hide the rest: */
   body > :not(main) {
     display: none;
