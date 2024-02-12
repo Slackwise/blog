@@ -328,7 +328,7 @@ footer {
     where `96di` matches common desktop displays of 1080p and below.  */
 @media (max-resolution: 96dpi) {
   :root {
-    font-weight: 450;
+    font-weight: 430;
   }
   p { 
     /* stroke-width: 0.2em; */ /* This improves the legibility of fonts on Windows, at least when light-on-dark */
