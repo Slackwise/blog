@@ -307,8 +307,8 @@ footer {
   :root {
     /*  Print font rendering is better than web, and doesn't suffer
         so let's normalize the font by removing the potential DPI tweak below. */
-    /* font-weight: normal; */
-    font-variation-settings: "GRAD" 0;
+    font-weight: normal;
+    /* font-variation-settings: "GRAD" 0; */
   }
 
   /* Only want to print the articles themselves, so hide the rest: */
@@ -329,8 +329,10 @@ footer {
     where `96di` matches common desktop displays of 1080p and below.  */
 @media (max-resolution: 96dpi) {
   :root {
-    /* font-weight: 430; */
-    font-variation-settings: "GRAD" 20;
+    font-weight: 430;
+    /*  I found that tweaking the grade had negative results at lower DPI,
+        like letterform subpixel hints causing some things to look weirdly thin. */
+    /* font-variation-settings: "GRAD" 20; */
   }
   p { 
     /* stroke-width: 0.2em; */ /* This improves the legibility of fonts on Windows, at least when light-on-dark */
