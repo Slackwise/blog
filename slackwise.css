@@ -31,7 +31,7 @@ You will find blog and structure related styling in other CSS files.
 
   --title-font-size: 150%;
   --subtitle-font-size: 90%;
-  font-size: 120%; /* Accessibility friendly relative size for browser override, and larger in general for readability */
+  font-size: 110%; /* Accessibility friendly relative size for browser override, and larger in general for readability */
   font-family: var(--general-font);
   font-kerning: auto;
   font-variant-ligatures: common-ligatures;
@@ -159,6 +159,7 @@ details {
 blockquote {
   text-align: justify;
   font-family: var(--quote-font);
+  font-size: 90%;
   font-style: italic;
   /* First we create the email quote styled bar using a border: */
   border-left: 20px solid var(--light-grey);
