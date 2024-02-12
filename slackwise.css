@@ -11,6 +11,7 @@ letterhead, or even as HTML email styling for branding purposes.
 You will find blog and structure related styling in other CSS files.
  ************************/
 
+ /*  Extracting the font information, now I can reuse this file elsewhere, and so can anyone! */
  @import url("roboto-fonts/roboto-fonts.css");
 
 * {
@@ -92,7 +93,7 @@ p {
 }
 
 aside {
-
+  font-size: 80%;
 }
 
 h1,
@@ -232,10 +233,10 @@ footer {
   & dl {
     /* width: 100%; */
     display: grid;
-    grid-template-areas: "author     publishdate"
-                        "license    updatedate"
-                        "comments   versionhistory"
-                        "comments   .";
+    grid-template-areas:  "author     publishdate"
+                          "license    updatedate"
+                          "comments   versionhistory"
+                          "comments   .";
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     column-gap: 10px;
@@ -251,8 +252,6 @@ footer {
     /* float: left;
     clear: left; */
     /* padding-right: var(--content-padding); */
-  }
-  & dl dd {
   }
 
   & dd[itemprop="author"] {
