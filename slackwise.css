@@ -305,6 +305,8 @@ footer {
   }
 
   :root {
+    /*  Print font rendering is better than web, and doesn't suffer
+        so let's normalize the font weight removing the potential DPI tweak below. */
     font-weight: normal;
   }
 
