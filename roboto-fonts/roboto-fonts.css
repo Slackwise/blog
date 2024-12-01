@@ -5,10 +5,9 @@
 /* A variant with more breathing room for paragraph readability */
 @font-face {
   font-family: "Roboto Flex (Custom Body)";
-  /* font-weight: 450; */  /* Desireable on 96dpi displays and below */
   font-stretch: 120%;
-  /*font-variation-settings: "YOPQ" 90; /* Makes only the thinner parts a bit thicker */
-  font-weight: 450;
+  /* font-weight: 450; */  /* Desireable on 96dpi displays and below */
+  /* font-variation-settings: "YOPQ" 90; /* Makes only the thinner parts a bit thicker */
   src: url("RobotoFlex.ttf");
 }
 

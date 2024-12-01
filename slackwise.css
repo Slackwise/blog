@@ -329,13 +329,12 @@ footer {
     Using a `@media` rule, we can target lower resolution displays,
     where `96di` matches common desktop displays of 1080p and below.  */
 @media (max-resolution: 96dpi) {
-  :root {
-    font-weight: 430;
+  p {
     /*  I found that tweaking the grade had negative results at lower DPI,
         like letterform subpixel hints causing some things to look weirdly thin. */
     /* font-variation-settings: "GRAD" 20; */
-  }
-  p { 
-    /* stroke-width: 0.2em; */ /* This improves the legibility of fonts on Windows, at least when light-on-dark */
+    font-weight: 450;
+    /* stroke-width: 0.2em; */
+    /* This improves the legibility of fonts on Windows, at least when light-on-dark */
   }
 }
