@@ -22,11 +22,11 @@ You will find blog and structure related styling in other CSS files.
 :root {
 
   /* TYPOGRAPHY */
-  --general-font: 'Roboto',                     'Roboto',       'Verdana',      sans-serif;
-  --body-font:    'Roboto Flex (Custom Body)',  'Roboto',       'Verdana',      sans-serif;
-  --code-font:    'Roboto Mono',                'Consolas',     'Inconsolata',  monospace;
-  --title-font:   'Roboto Condensed',           'Arial Narrow', 'Tahoma',       sans-serif;
-  --quote-font:   'Roboto Serif',               'Georgia',                      serif;
+  --general-font: 'Roboto',             'Roboto',       'Verdana',      sans-serif;
+  --body-font:    'Roboto Slack',       'Roboto',       'Verdana',      sans-serif;
+  --code-font:    'Roboto Mono',        'Consolas',     'Inconsolata',  monospace;
+  --title-font:   'Roboto Condensed',   'Arial Narrow', 'Tahoma',       sans-serif;
+  --quote-font:   'Roboto Serif',       'Georgia',                      serif;
 
 
   --title-font-size: 150%;
@@ -333,7 +333,7 @@ footer {
     /*  I found that tweaking the grade had negative results at lower DPI,
         like letterform subpixel hints causing some things to look weirdly thin. */
     /* font-variation-settings: "GRAD" 20; */
-    font-weight: 450;
+    /* font-weight: 450; */
     /* stroke-width: 0.2em; */
     /* This improves the legibility of fonts on Windows, at least when light-on-dark */
   }
