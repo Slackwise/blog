@@ -7,7 +7,8 @@
   font-family: "Roboto Flex (Custom Body)";
   /* font-weight: 450; */  /* Desireable on 96dpi displays and below */
   font-stretch: 120%;
-  font-variation-settings: "YOPQ" 90; /* Makes only the thinner parts a bit thicker */
+  /*font-variation-settings: "YOPQ" 90; /* Makes only the thinner parts a bit thicker */
+  font-weight: 450;
   src: url("RobotoFlex.ttf");
 }
 
