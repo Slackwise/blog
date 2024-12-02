@@ -15,16 +15,17 @@ body {
     ".   thesis  main  aside   ."
     ".   footer  main  aside   .";
   grid-template-columns: 1fr auto auto auto 1fr;
-  grid-template-rows: var(--us-letter-margin) auto 1fr auto auto;
+  grid-template-rows: var(--us-letter-margin) min-content auto auto auto;
 
   > header {
     grid-area: header;
-
+    height: min-content;
+    justify-self: right;
+    align-self: top;
     display: flex;
-    justify-content: left;
+    justify-content: right;
     align-items: center;
     gap: var(--content-padding);
-
     > img {
       height: 80px;
       width: 80px;
@@ -32,9 +33,34 @@ body {
   }
   > section#thesis {
     grid-area: thesis;
+    justify-self: right;
+    align-self: bottom;
+    > p {
+      max-width: calc(var(--us-letter-width) / 2);
+    }
   }
   > nav {
     grid-area: nav;
+    justify-self: right;
+    align-self: top;
+    text-align: right;
+    > h2 {
+      display: none;
+    }
+    > ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      gap: var(--content-padding);
+      font-size: var(--title-font-size);
+      font-family: var(--title-font);
+    }
+    & a {
+      
+    }
+    & a:visited {
+      color: none;
+    }
   }
   > main {
     grid-area: main;
@@ -44,8 +70,15 @@ body {
   }
   > aside {
     grid-area: aside;
+    justify-self: left;
+    align-self: top;
+    > :first-child {
+      margin-top: 0;
+    }
   }
   > footer {
     grid-area: footer;
+    justify-self: right;
+    align-self: bottom;
   }
 }
