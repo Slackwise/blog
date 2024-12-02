@@ -9,11 +9,11 @@ body {
   margin: 0;
   display: grid;
   grid-template-areas:
-    ".     .      .      .     ."
-    ".   header  main  aside   ."
-    ".   nav     main  aside   ."
-    ".   thesis  main  aside   ."
-    ".   footer  main  aside   .";
+    "...   ......  ....  .....   ..."
+    "...   header  main  aside   ..."
+    "...   nav     main  aside   ..."
+    "...   thesis  main  aside   ..."
+    "...   footer  main  aside   ...";
   grid-template-columns: 1fr auto auto auto 1fr;
   grid-template-rows: var(--us-letter-margin) min-content auto auto auto;
 
