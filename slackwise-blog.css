@@ -1,9 +1,11 @@
 @import url("slackwise.css");
 
 :root {
+  --backdrop-color: #EEE;
 }
 
 body { 
+  background-color: var(--backdrop-color);
   margin: auto;
   display: grid;
   grid-template-areas:
@@ -13,21 +15,34 @@ body {
     ".   thesis main  aside  ."
     ".   footer main  aside  .";
   grid-template-columns: 1fr auto auto auto 1fr;
-  grid-template-rows: var(--content-padding) auto 1fr auto auto;
+  grid-template-rows: var(--content-padding) auto auto auto auto;
 
-  & header {
+  > header {
     grid-area: header;
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: var(--content-padding);
+
+    > img {
+      height: 80px;
+      width: 80px;
+    }
   }
-  & nav {
+  > section#thesis {
+    grid-area: thesis;
+  }
+  > nav {
     grid-area: nav;
   }
-  & main {
+  > main {
     grid-area: main;
   }
-  & aside {
+  > aside {
     grid-area: aside;
   }
-  & footer {
+  > footer {
     grid-area: footer;
   }
 }

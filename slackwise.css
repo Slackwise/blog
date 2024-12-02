@@ -292,6 +292,12 @@ footer {
   }
 }
 
+img.avatar {
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 50%;
+}
+
 
 @media (max-width: 8.5in) { /* US letter width */
   article {
