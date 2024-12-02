@@ -6,24 +6,28 @@
 body { 
   margin: auto;
   display: grid;
-  grid-template-areas:  ". left main right .";
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  /* grid-template-rows: 1fr; */
-  column-gap: 10px;
+  grid-template-areas:
+    ".     .     .     .     ."
+    ".   header main  aside  ."
+    ".   nav    main  aside  ."
+    ".   thesis main  aside  ."
+    ".   footer main  aside  .";
+  grid-template-columns: 1fr auto auto auto 1fr;
+  grid-template-rows: var(--content-padding) auto 1fr auto auto;
 
   & header {
-    grid-area: left;
+    grid-area: header;
   }
   & nav {
-    grid-area: left;
+    grid-area: nav;
   }
   & main {
     grid-area: main;
   }
   & aside {
-    grid-area: right;
+    grid-area: aside;
   }
   & footer {
-    grid-area: main;
+    grid-area: footer;
   }
 }
