@@ -6,16 +6,16 @@
 
 body { 
   background-color: var(--backdrop-color);
-  margin: auto;
+  margin: 0;
   display: grid;
   grid-template-areas:
-    ".     .     .     .     ."
-    ".   header main  aside  ."
-    ".   nav    main  aside  ."
-    ".   thesis main  aside  ."
-    ".   footer main  aside  .";
+    ".     .      .      .     ."
+    ".   header  main  aside   ."
+    ".   nav     main  aside   ."
+    ".   thesis  main  aside   ."
+    ".   footer  main  aside   .";
   grid-template-columns: 1fr auto auto auto 1fr;
-  grid-template-rows: var(--content-padding) auto auto auto auto;
+  grid-template-rows: var(--us-letter-margin) auto 1fr auto auto;
 
   > header {
     grid-area: header;
@@ -38,6 +38,9 @@ body {
   }
   > main {
     grid-area: main;
+    > article:first-of-type {
+      margin-top: 0;
+    }
   }
   > aside {
     grid-area: aside;
