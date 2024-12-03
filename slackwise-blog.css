@@ -15,7 +15,7 @@ body {
     "...   thesis  main  aside   ..."
     "...   footer  main  aside   ...";
   grid-template-columns: 1fr auto auto auto 1fr;
-  grid-template-rows: var(--us-letter-margin) min-content auto auto auto;
+  grid-template-rows: var(--us-letter-margin) min-content 1fr min-content max-content;
 
   > header {
     grid-area: header;
