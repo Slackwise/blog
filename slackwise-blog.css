@@ -19,6 +19,8 @@ body {
 
   > header {
     grid-area: header;
+    position: sticky;
+    top: var(--us-letter-margin);
     height: min-content;
     justify-self: right;
     align-self: top;
@@ -36,11 +38,15 @@ body {
     justify-self: right;
     align-self: bottom;
     > p {
+      font-size: 80%;
       max-width: calc(var(--us-letter-width) / 2);
     }
   }
   > nav {
     grid-area: nav;
+    position: sticky;
+    top: calc(var(--us-letter-margin) + 80);
+    height: min-content;
     justify-self: right;
     align-self: top;
     text-align: right;
@@ -70,6 +76,9 @@ body {
   }
   > aside {
     grid-area: aside;
+    position: sticky; 
+    top: var(--us-letter-margin);
+    height: min-content;
     justify-self: left;
     align-self: top;
     > :first-child {
