@@ -23,9 +23,12 @@ body {
     grid-area: header;
     position: sticky; 
     top: var(--us-letter-margin);
-    height: min-content;
+    height: var(--max-sidebar-height);
+    display: flex;
+    justify-items: right;
+    flex-direction: column;
+    flex-wrap: wrap;
     > div#logo {
-      justify-self: right;
       align-self: top;
       display: flex;
       justify-content: right;
@@ -36,16 +39,7 @@ body {
         width: 80px;
       }
     }
-    > section#thesis {
-      justify-self: right;
-      align-self: bottom;
-      > p {
-        font-size: 80%;
-        max-width: var(--max-sidebar-width);
-      }
-    }
     > nav {
-      justify-self: right;
       align-self: top;
       text-align: right;
       > h2 {
@@ -66,6 +60,15 @@ body {
         color: none;
       }
     }
+    > section#thesis {
+      order: 99;
+      align-self: flex-end;
+      margin-top: 0 auto !important;
+      > p {
+        font-size: 80%;
+        max-width: var(--max-sidebar-width);
+      }
+    }
   }
   > main {
     grid-area: main;
@@ -77,7 +80,7 @@ body {
     grid-area: aside;
     position: sticky; 
     top: var(--us-letter-margin);
-    height: min-content;
+    height: var(--max-sidebar-height);
     justify-self: left;
     align-self: top;
     > :first-child {
