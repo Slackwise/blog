@@ -4,6 +4,7 @@
   --backdrop-color: #EEE;
   --max-sidebar-width: 370px;
   --max-sidebar-width: calc(var(--us-letter-width) / 2);
+  --max-sidebar-height: calc(100dvh - var(--us-letter-margin));
 }
 
 body { 
@@ -16,7 +17,7 @@ body {
     "...   ......  main    .....   ..."
     "...   ......  footer  .....   ...";
   grid-template-columns: 1fr minmax(auto, var(--max-sidebar-width)) auto auto 1fr;
-  grid-template-rows: var(--us-letter-margin) calc(100dvh - var(--us-letter-margin)) 1fr max-content;
+  grid-template-rows: var(--us-letter-margin) var(--max-sidebar-height) 1fr max-content;
 
   > header {
     grid-area: header;
@@ -40,7 +41,7 @@ body {
       align-self: bottom;
       > p {
         font-size: 80%;
-        max-width: calc(var(--us-letter-width) / 2);
+        max-width: var(--max-sidebar-width);
       }
     }
     > nav {
