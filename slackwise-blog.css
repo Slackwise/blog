@@ -2,6 +2,8 @@
 
 :root {
   --backdrop-color: #EEE;
+  --max-sidebar-width: 370px;
+  --max-sidebar-width: calc(var(--us-letter-width) / 2);
 }
 
 body { 
@@ -9,63 +11,59 @@ body {
   margin: 0;
   display: grid;
   grid-template-areas:
-    "...   ......  ....  .....   ..."
-    "...   header  main  aside   ..."
-    "...   nav     main  aside   ..."
-    "...   thesis  main  aside   ..."
-    "...   footer  main  aside   ...";
-  grid-template-columns: 1fr auto auto auto 1fr;
-  grid-template-rows: var(--us-letter-margin) min-content 1fr min-content max-content;
+    "...   ......  ....    .....   ..."
+    "...   header  main    aside   ..."
+    "...   ......  main    .....   ..."
+    "...   ......  footer  .....   ...";
+  grid-template-columns: 1fr minmax(auto, var(--max-sidebar-width)) auto auto 1fr;
+  grid-template-rows: var(--us-letter-margin) 100dvh 1fr max-content;
 
   > header {
     grid-area: header;
-    position: sticky;
+    position: sticky; 
     top: var(--us-letter-margin);
     height: min-content;
-    justify-self: right;
-    align-self: top;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    gap: var(--content-padding);
-    > img {
-      height: 80px;
-      width: 80px;
-    }
-  }
-  > section#thesis {
-    grid-area: thesis;
-    justify-self: right;
-    align-self: bottom;
-    > p {
-      font-size: 80%;
-      max-width: calc(var(--us-letter-width) / 2);
-    }
-  }
-  > nav {
-    grid-area: nav;
-    position: sticky;
-    top: calc(var(--us-letter-margin) + 80);
-    height: min-content;
-    justify-self: right;
-    align-self: top;
-    text-align: right;
-    > h2 {
-      display: none;
-    }
-    > ul {
-      list-style-type: none;
+    > div#logo {
+      justify-self: right;
+      align-self: top;
       display: flex;
-      flex-direction: column;
+      justify-content: right;
+      align-items: center;
       gap: var(--content-padding);
-      font-size: var(--title-font-size);
-      font-family: var(--title-font);
+      > img {
+        height: 80px;
+        width: 80px;
+      }
     }
-    & a {
-      
+    > section#thesis {
+      justify-self: right;
+      align-self: bottom;
+      > p {
+        font-size: 80%;
+        max-width: calc(var(--us-letter-width) / 2);
+      }
     }
-    & a:visited {
-      color: none;
+    > nav {
+      justify-self: right;
+      align-self: top;
+      text-align: right;
+      > h2 {
+        display: none;
+      }
+      > ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: var(--content-padding);
+        font-size: var(--title-font-size);
+        font-family: var(--title-font);
+      }
+      & a {
+        
+      }
+      & a:visited {
+        color: none;
+      }
     }
   }
   > main {
@@ -87,7 +85,6 @@ body {
   }
   > footer {
     grid-area: footer;
-    justify-self: right;
-    align-self: bottom;
+    margin-left: var(--us-letter-margin);
   }
 }
