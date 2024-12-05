@@ -16,7 +16,7 @@ body {
     "...   ......  main    .....   ..."
     "...   ......  footer  .....   ...";
   grid-template-columns: 1fr minmax(auto, var(--max-sidebar-width)) auto auto 1fr;
-  grid-template-rows: var(--us-letter-margin) 100dvh 1fr max-content;
+  grid-template-rows: var(--us-letter-margin) calc(100dvh - var(--us-letter-margin)) 1fr max-content;
 
   > header {
     grid-area: header;
