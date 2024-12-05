@@ -27,7 +27,6 @@ body {
     display: flex;
     justify-items: right;
     flex-direction: column;
-    flex-wrap: wrap;
     > div#logo {
       align-self: top;
       display: flex;
@@ -63,7 +62,7 @@ body {
     > section#thesis {
       order: 99;
       align-self: flex-end;
-      margin-top: 0 auto !important;
+      margin-top: auto;
       > p {
         font-size: 80%;
         max-width: var(--max-sidebar-width);
