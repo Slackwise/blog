@@ -95,7 +95,7 @@ body {
     align-self: top;
     color: var(--background-color);
     > :first-child {
-      margin-top: var(--us-letter-margin);
+      /* margin-top: var(--us-letter-margin); */
     }
   }
   > footer {
