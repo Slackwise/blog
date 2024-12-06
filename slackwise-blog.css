@@ -1,7 +1,9 @@
 @import url("slackwise.css");
 
 :root {
-  --backdrop-color: #EEE;
+  --backdrop-color: #444;
+  --box-shadow: 0 0 20px 2px rgba(0,0,0,.5);
+  --box-border: 1px solid #DDD;
   --max-sidebar-width: 370px;
   --max-sidebar-width: calc(var(--us-letter-width) / 2);
   --max-sidebar-height: calc(100dvh - var(--us-letter-margin));
@@ -18,6 +20,7 @@ body {
     "...   ......  footer  .....   ...";
   grid-template-columns: 1fr minmax(auto, var(--max-sidebar-width)) auto auto 1fr;
   grid-template-rows: var(--us-letter-margin) var(--max-sidebar-height) 1fr max-content;
+  column-gap: var(--content-padding);
 
   > header {
     grid-area: header;
@@ -27,6 +30,8 @@ body {
     display: flex;
     justify-items: right;
     flex-direction: column;
+    margin-top: var(--us-letter-margin);
+    color: var(--background-color);
     > div#logo {
       align-self: top;
       display: flex;
@@ -36,6 +41,9 @@ body {
       > img {
         height: 80px;
         width: 80px;
+      }
+      p {
+        color: #BBB !important; /* MAKE RELATIVE via darken() */
       }
     }
     > nav {
@@ -53,10 +61,10 @@ body {
         font-family: var(--title-font);
       }
       & a {
-        
+        color: var(--background-color);
       }
       & a:visited {
-        color: none;
+        color: var(--background-color);
       }
     }
     > section#thesis {
@@ -71,8 +79,10 @@ body {
   }
   > main {
     grid-area: main;
+    background-color: var(--background-color);
+    box-shadow: 6px 6px 10px rgba(0,0,0,0.2), -6px 6px 10px rgba(0,0,0,0.2);
     > article:first-of-type {
-      margin-top: 0;
+      /* margin-top: 0; */
     }
   }
   > aside {
@@ -82,8 +92,9 @@ body {
     height: var(--max-sidebar-height);
     justify-self: left;
     align-self: top;
+    color: var(--background-color);
     > :first-child {
-      margin-top: 0;
+      margin-top: var(--us-letter-margin);
     }
   }
   > footer {
