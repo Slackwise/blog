@@ -6,7 +6,7 @@
   --box-border: 1px solid #DDD;
   --max-sidebar-width: 370px;
   --max-sidebar-width: calc(var(--us-letter-width) / 2);
-  --max-sidebar-height: calc(100dvh - var(--us-letter-margin));
+  --max-sidebar-height: calc(100dvh - var(--us-letter-margin) * 2);
 }
 
 body { 
