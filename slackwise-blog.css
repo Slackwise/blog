@@ -72,6 +72,7 @@ body {
       order: 99;
       align-self: flex-end;
       margin-top: auto;
+      color: #BBB;
       > p {
         font-size: 80%;
         max-width: var(--max-sidebar-width);
