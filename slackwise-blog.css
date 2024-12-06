@@ -5,8 +5,8 @@
   --box-shadow: 0 0 20px 2px rgba(0,0,0,.5);
   --box-border: 1px solid #DDD;
   --sidebar-margin-top: calc(var(--us-letter-margin) * 2);
-  --max-sidebar-width: 370px;
-  --max-sidebar-width: calc(var(--us-letter-width) / 2);
+  --max-sidebar-width: 260px;
+  /* --max-sidebar-width: calc(var(--us-letter-width) / 2); */
   --max-sidebar-height: calc(100dvh - var(--us-letter-margin) * 2);
 }
 
@@ -40,8 +40,8 @@ body {
       align-items: center;
       gap: var(--content-padding);
       > img {
-        height: 80px;
-        width: 80px;
+        height: 50px;
+        width: 50px;
       }
       p {
         color: #BBB !important; /* MAKE RELATIVE via darken() */
