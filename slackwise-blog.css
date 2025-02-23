@@ -34,16 +34,21 @@ body {
     margin-top: var(--us-letter-margin);
     color: var(--background-color);
     > div#logo {
+      text-align: right;
       align-self: top;
       display: flex;
       justify-content: right;
       align-items: center;
-      gap: var(--content-padding);
+      gap: 0.5em;
       > img {
-        height: 50px;
-        width: 50px;
+        height: 35px;
+        width: 35px;
+      }
+      h1 {
+        font-size: 120%;
       }
       p {
+        font-size: 80%;
         color: #BBB !important; /* MAKE RELATIVE via darken() */
       }
     }
