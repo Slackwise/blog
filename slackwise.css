@@ -35,6 +35,7 @@ You will find blog and structure related styling in other CSS files.
   font-family: var(--general-font);
   font-kerning: auto;
   font-variant-ligatures: common-ligatures;
+  font-variant-emoji: emoji;
   
   /* Attempting to resolve font over-boldness rendering issue on macOS: */
   -moz-osx-font-smoothing: grayscale;
@@ -239,13 +240,13 @@ footer {
   & dl {
     /* width: 100%; */
     display: grid;
-    grid-template-areas:  "author     publishdate"
-                          "license    updatedate"
-                          "comments   versionhistory"
-                          "comments   .";
+    grid-template-areas:  "tags       publishdate"
+                          "comments   updatedate"
+                          "comments   versionhistory";
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     column-gap: 10px;
+    margin-top: var(--content-padding);
   }
 
   & dl > * {
@@ -262,15 +263,29 @@ footer {
 
   & dd[itemprop="author"] {
     grid-area: author;
+    display: none;
   }
   & dd[itemprop="author"]::before {
     content: "by ";
+    display: none;
   }
   & dd:has(a[itemprop="license"]) {
     grid-area: license;
+    display: none;
   }
   & a[itemprop="license"] {
     color: var(--body-copy-color); /* We really don't neeeed the link to draw attention, but might as well leave it for the curious... */
+  }
+  & dd[itemprop="keywords"] { /* tags */
+    grid-area: tags;
+    font-size: 120%;
+  }
+  & dd[itemprop="keywords"]::before {
+    /* content: "\1F3F7"; */
+    /* line-height: 0; */
+    /* font-size: 16pt; */
+    /* margin-right: 5px; */
+    content: "Tags: ";
   }
   & dd:has(a[itemprop="discussionUrl"]) {
     grid-area: comments;

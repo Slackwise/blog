@@ -10,10 +10,11 @@
 
 <body>
   <main>
-    <article itemprop="blogPost">
+    <!-- Need to make sure all blog posts are schema'd: https://schema.org/BlogPosting -->
+    <article itemscope itemtype="https://schema.org/BlogPosting" itemid="CANONICAL URL HERE">
       <header>
         <hgroup>
-          <h1>A Short Title Here</h1>
+          <h1 itemprop="name">A Short Title Here</h1>
           <p>A longer subtitle here with more words and stuff</p>
         </hgroup>
       </header>
@@ -68,7 +69,8 @@ cat.status;</code></pre>
         <h2>Metadata</h2>
         <dl>
           <dt>Author</dt><dd itemprop="author" itemscope itemtype="https://schema.org/Person"><a href="contact" itemprop="name">Adam "Slackwise" Flanczewski</a></dd>
-          <dt>License</dt><dd><a href="https://www.uspto.gov/ip-policy/copyright-policy/copyright-basics" itemprop="license" alt="Copyrighted, meaning no touch. If you don't understand how copyright works, click this link.">&copy; All rights reserved.</a></dd>
+          <dt>License</dt><dd><a href="https://www.uspto.gov/ip-policy/copyright-policy/copyright-basics" itemprop="copyrightNotice" alt="Copyrighted, meaning no touch. If you don't understand how copyright works, click this link.">&copy; All rights reserved.</a></dd>
+          <dt>Tags</dt><dd itemprop="keywords"><a>TAGS</a>, <a>GO</a>, <a>HERE</a></a></dd>
           <dt>Comments</dt><dd><a itemprop="discussionUrl" href="">View Comments</a></dd>
           <dt>First Publish Date</dt><dd><time itemprop="datePublished" datetime="2024-01-27">January 27th, 2024</time></dd>
           <dt>Last Update Date</dt><dd><time itemprop="dateModified" datetime="2024-01-27">January 27th, 2024</time></dd>
