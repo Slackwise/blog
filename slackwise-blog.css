@@ -106,6 +106,15 @@ body {
   }
   > footer {
     grid-area: footer;
+    margin-top: var(--content-padding);
     margin-left: var(--us-letter-margin);
+    margin-bottom: calc(var(--us-letter-margin) / 2);
+    color: var(--subtitle-color);
+    a {
+      color: var(--subtitle-color);
+    }
+    a:visited {
+      color: var(--subtitle-color);
+    }
   }
 }
