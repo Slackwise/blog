@@ -35,6 +35,10 @@ You will find blog and structure related styling in other CSS files.
   font-family: var(--general-font);
   font-kerning: auto;
   font-variant-ligatures: common-ligatures;
+  
+  /* Attempting to resolve font over-boldness rendering issue on macOS: */
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 
 
   /*  COLOR NAMES
