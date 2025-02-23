@@ -94,6 +94,7 @@ p {
   max-width: var(--content-max-width);
   font-family: var(--body-font);
   text-align: justify;
+  font-weight: 450; /* Slightly thiccer body copy */
 }
 
 aside {
@@ -318,7 +319,7 @@ img.avatar {
   :root {
     /*  Print font rendering is better than web, and doesn't suffer
         so let's normalize the font by removing the potential DPI tweak below. */
-    font-weight: normal;
+    /* font-weight: normal; */
     /* font-variation-settings: "GRAD" 0; */
   }
 
