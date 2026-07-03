@@ -23,7 +23,7 @@ You will find blog and structure related styling in other CSS files.
 
   /* TYPOGRAPHY */
   --general-font: 'Roboto',             'Roboto',       'Verdana',      sans-serif;
-  --body-font:    'Roboto Slack',       'Roboto',       'Verdana',      sans-serif;
+  --body-font:    'Roboto Slab',        'Roboto',       'Verdana',      sans-serif;
   --code-font:    'Roboto Mono',        'Consolas',     'Inconsolata',  monospace;
   --title-font:   'Roboto Condensed',   'Arial Narrow', 'Tahoma',       sans-serif;
   --quote-font:   'Roboto Serif',       'Georgia',                      serif;
